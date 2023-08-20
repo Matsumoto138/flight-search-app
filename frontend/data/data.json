@@ -1,0 +1,199 @@
+{
+  "flight":[
+  {
+    "id": 1001,
+    "take_off_city": "Izmir Adnan Menderes Havalimanı",
+    "arrival_city": "İstanbul Havalimanı",
+    "take_of_date": "24/08/2023",
+    "return_date": null,
+    "flight_length": 2,
+    "price": "$39.96"
+  },
+  {
+    "id": 1002,
+    "take_off_city": "Ankara Esenboğa Havalimanı",
+    "arrival_city": "Izmir Adnan Menderes Havalimanı",
+    "take_of_date": "20/08/2023",
+    "return_date": null,
+    "flight_length": 10,
+    "price": "$90.72"
+  },
+  {
+    "id": 1003,
+    "take_off_city": "Ankara Esenboğa Havalimanı",
+    "arrival_city": "Istanbul Sabiha Gökçen Havalimanı",
+    "take_of_date": "21/08/2023",
+    "return_date": null,
+    "flight_length": 7,
+    "price": "$41.00"
+  },
+  {
+    "id": 1004,
+    "take_off_city": "Istanbul Havalimanı",
+    "arrival_city": "Hatay Havalimanı",
+    "take_of_date": "25/08/2023",
+    "return_date": null,
+    "flight_length": 8,
+    "price": "$87.66"
+  },
+  {
+    "id": 1005,
+    "take_off_city": "Antalya Havalimanı",
+    "arrival_city": "Istanbul Sabiha Gökçen Havalimanı",
+    "take_of_date": "27/08/2023",
+    "return_date": "09/09/2023",
+    "flight_length": 3,
+    "price": "$71.82"
+  },
+  {
+    "id": 1006,
+    "take_off_city": "Istanbul Havalimanı",
+    "arrival_city": "Roma Leonardo da Vinci Havalimanı",
+    "take_of_date": "26/08/2023",
+    "return_date": "26/09/2023",
+    "flight_length": 8,
+    "price": "$64.26"
+  },
+  {
+    "id": 1007,
+    "take_off_city": "Istanbul Havalimanı",
+    "arrival_city": "Paris Charles De Gaulle Havalimanı",
+    "take_of_date": "27/08/2023",
+    "return_date": "06/09/2023",
+    "flight_length": 13,
+    "price": "$91.88"
+  },
+  {
+    "id": 1008,
+    "take_off_city": "Istanbul Sabiha Gökçen Havalimanı",
+    "arrival_city": "New York John F. Kennedy Havalimanı",
+    "take_of_date": "20/08/2023",
+    "return_date": null,
+    "flight_length": 14,
+    "price": "$70.41"
+  },
+  {
+    "id": 1009,
+    "take_off_city": "Istanbul Havalimanı",
+    "arrival_city": "Berlin Brandenburg Havalimanı",
+    "take_of_date": "27/08/2023",
+    "return_date": "08/09/2023",
+    "flight_length": 4,
+    "price": "$93.47"
+  },
+  {
+    "id": 1010,
+    "take_off_city": "Istanbul Sabiha Gökçen Havalimanı",
+    "arrival_city": "Washington Dulles Uluslararası Havaalanı",
+    "take_of_date": "25/08/2023",
+    "return_date": null,
+    "flight_length": 9,
+    "price": "$65.49"
+  },
+  {
+    "id": 1011,
+    "take_off_city": "İstanbul Havalimanı",
+    "arrival_city": "Milano Malpensa Havalimanı",
+    "take_of_date": "26/08/2023",
+    "return_date": "10/09/2023",
+    "flight_length": 12,
+    "price": "$88.80"
+  },
+  {
+    "id": 1012,
+    "take_off_city": "İstanbul Sabiha Gökçen Havalimanı",
+    "arrival_city": "Münih Franz Josef Strauss Havalimanı",
+    "take_of_date": "23/08/2023",
+    "return_date": null,
+    "flight_length": 8,
+    "price": "$78.24"
+  },
+  {
+    "id": 1013,
+    "take_off_city": "Van Ferit Melen Havalimanı",
+    "arrival_city": "Ankara Esenboğa Havalimanı",
+    "take_of_date": "29/08/2023",
+    "return_date": "21/09/2023",
+    "flight_length": 7,
+    "price": "$96.64"
+  },
+  {
+    "id": 1014,
+    "take_off_city": "Hatay Havalimanı",
+    "arrival_city": "İstanbul Sabiha Gökçen Havalimanı",
+    "take_of_date": "27/08/2023",
+    "return_date": null,
+    "flight_length": 13,
+    "price": "$89.65"
+  },
+  {
+    "id": 1015,
+    "take_off_city": "Ankara Esenboğa Havalimanı",
+    "arrival_city": "Antalya Havalimanı",
+    "take_of_date": "30/08/2023",
+    "return_date": null,
+    "flight_length": 14,
+    "price": "$84.98"
+  }
+],
+"airports":[
+  {
+      "id": 1,
+      "name": "Izmir Adnan Menderes Havalimanı"
+  },
+  {
+      "id": 2,
+      "name": "Istanbul Havalimanı"
+  },
+  {
+      "id": 3,
+      "name": "Ankara Esenboğa Havalimanı"
+  },
+  {
+      "id": 4,
+      "name": "Istanbul Sabiha Gökçen Havalimanı"
+  },
+  {
+      "id": 5,
+      "name": "Antalya Havalimanı"
+  },
+  {
+      "id": 6,
+      "name": "Roma Leonardo da Vinci Havalimanı"
+  },
+  {
+      "id": 7,
+      "name": "Paris Charles De Gaulle Havalimanı"
+  },
+  {
+      "id": 8,
+      "name": "New York John F. Kennedy Havalimanı"
+  },
+  {
+      "id": 9,
+      "name": "Berlin Brandenburg Havalimanı"
+  },
+  {
+      "id": 10,
+      "name": "Washington Dulles Uluslararası Havaalanı"
+  },
+  {
+      "id": 11,
+      "name": "Milano Malpensa Havalimanı"
+  },
+  {
+      "id": 12,
+      "name": "Münih Franz Josef Strauss Havalimanı"
+  },
+  {
+      "id": 13,
+      "name": "Van Ferit Melen Havalimanı"
+  },
+  {
+      "id": 14,
+      "name": "Hatay Havalimanı"
+  }
+
+
+]
+}
