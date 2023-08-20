@@ -11,8 +11,27 @@ function Ticket() {
     const [firstMiniData, setFirstMiniData] = useState([])
     const [secondMiniData, setSecondMiniData] = useState([])
     const [firstValue, setFirstValue] = useState("")
- 
+    const [secondValue, setSecondValue] = useState("")
+    const [allData, setAllData] = useState([]) 
 
+    const getResult = async (value) =>{
+        fetch('http://localhost:8000/flight')
+        .then((response) => response.json())
+        .then((json) => {
+            const results = json.filter((flight) => {
+                return value && flight && flight.take_off_city && flight.take_off_city.toLowerCase().includes(value)
+            })
+            setAllData(results)
+        })
+        if(allData == []){
+            fetch('http://localhost:8000/flight')
+        .then((response) => response.json())
+        .then((json) => {
+            setAllData(json)
+        })
+        }
+    }
+    
     const getDataTakeoff = async (value) =>{
     
         fetch('http://localhost:8000/airports')
@@ -40,19 +59,18 @@ function Ticket() {
     }
 
     const chageValueInputOne = (name) =>{
-        const input1 = document.getElementById('input1')
-        input1.value = name
+        setFirstValue(name)
         setFirstMiniData([])
     }
     
     const chageValueInputTwo = (name) =>{
-        const input2 = document.getElementById('input2')
-        input2.value = name
+        setSecondValue(name)
         setSecondMiniData([])
     }
     
 
   return (
+    <div className="Big-Table">
     <div className="Ticket">
         <div className="Choose-Way">
             <div className="Way-Group">
@@ -87,7 +105,7 @@ function Ticket() {
         </div>
         <div className="Choose-Airport">
             <div className="First-Input-Area">
-                <input type="text" id="input1" placeholder="Nereden"  onChange={(e) => {getDataTakeoff(e.target.value)}} />
+                <input type="text" id="input1" value={firstValue} placeholder="Nereden"  onChange={(e) => {getDataTakeoff(e.target.value); setFirstValue(e.target.value)}} />
                 <div className='First-Mini-Data-List'>
                     {
                         firstMiniData.map((data,id) => {
@@ -98,7 +116,7 @@ function Ticket() {
             </div>
 
             <div className="Second-Input-Area">
-                <input type="text" id="input2" placeholder="Nereye" onChange={(e) => {getDataArrive(e.target.value)}}/>
+                <input type="text" id="input2" value={secondValue} placeholder="Nereye" onChange={(e) => {getDataArrive(e.target.value); setSecondValue(e.target.value)}}/>
                 <div className='Second-Mini-Data-List'>
                     {
                         secondMiniData.map((data,id) => {
@@ -118,8 +136,35 @@ function Ticket() {
                 
         </div>
         <div className="Search-Button">
-            <button>Ara</button>
+            <button onClick={() =>getResult(firstValue)}>Ara</button>
         </div>
+    </div>
+    <div className="Table">
+        <table>
+            <tr>
+                <th>Kod</th>
+                <th>Kalkış Yeri</th>
+                <th>Varış Yeri</th>
+                <th>Gidiş Tarihi</th>
+                <th>Dönüş Tarihi</th>
+                <th>Uçuş Süresi</th>
+                <th>Ücret</th>
+            </tr>
+            {allData.map((data,id) => {
+                return (
+                    <tr>
+                        <td>{data.id}</td>
+                        <td>{data.take_off_city}</td>
+                        <td>{data.arrival_city}</td>
+                        <td>{data.take_of_date}</td>
+                        <td>{data.return_date}</td>
+                        <td>{data.flight_length}</td>
+                        <td>{data.price}</td>
+                    </tr>
+                )
+            })}
+        </table>
+    </div>
     </div>
   )
 }
